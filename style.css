@@ -26,7 +26,15 @@ body {
 
 .childcontainer button{
     padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid;
     
+}
+
+.childcontainer input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid;
 }
 
 
