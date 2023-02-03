@@ -4,6 +4,7 @@ let names = ""
 function getname(){
     names=document.querySelector(".name1").value;
     names=names+document.querySelector(".name2").value;
+    names = names.toLowerCase();
 
 }
 
