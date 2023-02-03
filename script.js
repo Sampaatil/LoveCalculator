@@ -16,7 +16,7 @@ function calculate(){
     for(let i=0;i<names.length;i++){
         num_result+=names.charCodeAt(i);
     }
-    if(num_result==1300){
+    if(num_result==1300 || num_result==27){
         document.getElementById("result1").innerHTML = "Error";
     }else {
         document.getElementById("result1").innerHTML = num_result%100+"% compatible";
