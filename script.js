@@ -36,10 +36,10 @@ function calculate(){
  app.use(express.static('public'));
 
  app.get('/', (req, res) => {
-  res.sendFile('index.html', { root:./ });
+  res.sendFile('index.html', { root: './' });
    });
 
  app.listen(port, () => {
  	console.log(`Love Calculator app listening at http://localhost:${port}`);
      });
-
+	
