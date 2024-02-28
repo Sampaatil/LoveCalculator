@@ -5,6 +5,9 @@ FROM node:alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
+COPY index.html ./
+COPY script.js ./
+COPY style.css ./
 COPY package*.json ./
 
 # Install any dependencies

@@ -29,17 +29,29 @@ function calculate(){
 
 // script.js
 
- const express = require('express');
- const app = express();
- const port = 3000;
 
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Serve static files from the 'public' directory
  app.use(express.static('public'));
 
+ // Serve index.html for the root path '/'
  app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: './' });
-   });
-
- app.listen(port, () => {
- 	console.log(`Love Calculator app listening at http://localhost:${port}`);
+     res.sendFile('index.html', { root: './' });
      });
-	
+
+     // Serve style.css file
+     app.get('/style.css', (req, res) => {
+         res.sendFile('style.css', { root: './' });
+         });
+
+         // Serve script.js file
+         app.get('/script.js', (req, res) => {
+             res.sendFile('script.js', { root: './' });
+             });
+
+             app.listen(port, () => {
+                 console.log(`Love Calculator app listening at http://localhost:${port}`);
+                 });
